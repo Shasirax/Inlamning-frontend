@@ -10,52 +10,57 @@
     <header>
       <h1>Receptboken</h1>
       <nav class="main-menu">
-        <a href="#">Hem</a>
-        <a href="#">Recept</a>
-        <a href="#">Inköpslista (antal)</a>
+        <ul>
+          <a href="#">Hem</a>
+          <a href="#">Recept</a>
+          <a href="#">Inköpslista (antal)</a>
+        </ul>
       </nav>
     </header>
     <main>
-      <section>
-        <div class="search">
-          <input id="search-input" type="text" value="Sök recept..."/>
-          <button id="button-search-all">Alla</button>
-          <button id="button-search-Middag">Middag</button>
-          <button id="button-search-Bakning">Bakning</button>
-        </div>
-        <article class="recipe-cards">
-            <img src="" alt="Bild på första recept">
-            <h3>Recept 1</h3>
-            <p>20 min * 4 portioner</p>
-            <button>+ Lägg till i inköplista</button>
-        </article>
-        <article class="recipe-cards">
-            <img src="" alt="Bild på första recept">
-            <h3>Recept 2</h3>
-            <p>30 min * 2 portioner</p>
-            <button>+ Lägg till i inköplista</button>
-        </article>
-        <article class="recipe-cards">
-            <img src="" alt="Bild på första recept">
-            <h3>Recept 3</h3>
-            <p>60 min * 4 portioner</p>
-            <button>+ Lägg till i inköplista</button>
-        </article>
-      </section>
-      <aside>
-        <h2>Inköpslista</h2>
-        <ul>
-            <li>Mjölk</li>
-            <li>Ägg</li>
-            <li>Mjöl</li>
-            <button>Ladda ner .txt</button>
-            <button>Töm listan</button>
-        </ul>
-      </aside>
-      <footer>
-        <h2>Privat receptsamling</h2>
-      </footer>
+      <div class="search">
+        <input id="search-input" type="text" value="Sök recept..." />
+        <button id="button-search-all">Alla</button>
+        <button id="button-search-Middag">Middag</button>
+        <button id="button-search-Bakning">Bakning</button>
+      </div>
+
+      <article class="recipe-cards">
+        <img src="" alt="Bild på första recept" />
+        <h3>Recept 1</h3>
+        <p>20 min * 4 portioner</p>
+        <button>+ Lägg till i inköplista</button>
+      </article>
+
+      <article class="recipe-cards">
+        <img src="" alt="Bild på första recept" />
+        <h3>Recept 2</h3>
+        <p>30 min * 2 portioner</p>
+        <button>+ Lägg till i inköplista</button>
+      </article>
+
+      <article class="recipe-cards">
+        <img src="" alt="Bild på första recept" />
+        <h3>Recept 3</h3>
+        <p>60 min * 4 portioner</p>
+        <button>+ Lägg till i inköplista</button>
+      </article>
     </main>
+    
+    <aside>
+      <h2>Inköpslista</h2>
+      <ul>
+        <li>Mjölk</li>
+        <li>Ägg</li>
+        <li>Mjöl</li>
+      </ul>
+      <button>Ladda ner .txt</button>
+      <button>Töm listan</button>
+    </aside>
+
+    <footer>
+      <h3>Privat receptsamling</h3>
+    </footer>
 
     <script src="script.js"></script>
   </body>
