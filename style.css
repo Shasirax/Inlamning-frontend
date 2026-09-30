@@ -25,8 +25,7 @@ body {
   gap: 24px;
   background-color: #7d9c65;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    "header" "main" "aside" "footer";
+  grid-template-areas: "header" "main" "aside" "footer";
 }
 
 header {
@@ -66,9 +65,9 @@ footer {
   body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr;
-    grid-template-areas: 
-    "header header"
-    "main aside"
-    "footer footer";
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
   }
 }

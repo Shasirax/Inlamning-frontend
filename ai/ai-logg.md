@@ -1,4 +1,5 @@
 Claude:
+
 Prompt:
     
     Hjälp mig skapa en layoutskiss för en hemsida som bas för min inlämningsuppgift för denna kurs. Planen är just nu:

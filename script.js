@@ -1,1 +1,1 @@
-console.log("Kör!"); 
+console.log("Kör!");
