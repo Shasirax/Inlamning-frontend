@@ -24,8 +24,14 @@ body {
   display: grid;
   gap: 24px;
   background-color: #7d9c65;
-  grid-template-columns: 1fr;
-  grid-template-areas: "header" "main" "aside" "footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
 
   font-family:
     "anthropic-sans",
@@ -34,10 +40,10 @@ body {
     "Segoe UI",
     sans-serif;
   background: transparent;
+  background-color: #7d9c65;
 }
 
 header {
-  justify-content: space-between;
   grid-area: header;
   background-color: #b93636;
   align-items: end;
@@ -45,7 +51,7 @@ header {
 
 .main-menu {
   grid-area: nav;
-  align-items: end;
+  background-color: #b93636;
   justify-self: end;
 }
 
@@ -74,7 +80,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3fr;
     grid-template-areas:
-      "header header"
+      "header nav"
       "main aside"
       "footer footer";
   }
