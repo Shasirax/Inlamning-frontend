@@ -73,16 +73,21 @@ main {
 #search {
   background-color: #425b2e;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 10px;
-  width: 250px;
+  max-width: 100%;
   flex-basis: 100%;
-  justify-content: center;
   padding: 10px 20px;
   border-radius: 10px;
 }
 
-.recipe-cards {
+#search-input {
+  flex-basis: 80%;
+  max-width: 100%;
+}
+
+#recipe-cards {
   background-color: #ae4343;
   border-radius: 1rem;
   padding: 10px 20px;
@@ -93,7 +98,8 @@ main {
 }
 
 .recipe {
-  border: 10px;
+  border: 1px;
+  border-style: solid;
   border-color: #111111;
   display: grid;
   background-color: #425b2e;
@@ -103,6 +109,7 @@ main {
 
 .recipe p {
   font-weight: 500;
+  margin: 5px;
 }
 
 .recipe img {
@@ -120,9 +127,6 @@ main {
   justify-content: space-between;
 }
 
-.recipe p {
-  margin: 5px;
-}
 .btn {
   padding: 12px 25px;
   border: none;
@@ -152,6 +156,10 @@ main {
     gap: 15px;
     font-size: 0.9rem;
     padding: 12px 15px;
+  }
+
+  #search {
+    max-width: 300px;
   }
   main {
     max-width: 80%;
