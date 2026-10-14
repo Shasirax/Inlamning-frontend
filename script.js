@@ -10,6 +10,7 @@ const shoppingList = document.querySelector("#shopping-list");
 //Variabler
 const total = document.querySelector("#total");
 const remaining = document.querySelector("#remaining");
+let shoppingListAmount = 0;
 
 //Funktioner
 function openMenu() {
@@ -17,6 +18,7 @@ function openMenu() {
 }
 
 function addToShoppingList(event) {
+  event.preventDefault();
   const ingredientsArray = [];
   const recipe = event.currentTarget.closest("article");
 
@@ -31,7 +33,9 @@ function addToShoppingList(event) {
     const newItem = document.createElement("li");
     newItem.textContent = `${ingredientsArray.shift()} × ${ingredientsArray.shift()}`;
     shoppingList.append(newItem);
+    shoppingListAmount++;
   }
+  shoppingListAmountUpdater();
 }
 
 function emptyShoppingList() {
@@ -39,6 +43,12 @@ function emptyShoppingList() {
   listItems.forEach(function (item) {
     item.remove();
   });
+  shoppingListAmount = 0;
+  shoppingListAmountUpdater();
+}
+
+function shoppingListAmountUpdater() {
+  total.textContent = `Totalt: ${shoppingListAmount} ingredienser`;
 }
 
 //Event
