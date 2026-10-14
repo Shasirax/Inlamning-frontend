@@ -1,10 +1,6 @@
-console.log("Kör!");
-
 const menuBtn = document.querySelector("#menu-btn");
 const menu = document.querySelector("#menu");
-const addBtn1 = document.querySelector("#add-btn-1");
-const addBtn2 = document.querySelector("#add-btn-2");
-const addBtn3 = document.querySelector("#add-btn-3");
+const addBtns = document.querySelectorAll(".add-list-btn");
 const emptyListBtn = document.querySelector("#empty-list-btn");
 
 const shoppingList = document.querySelector("#shopping-list");
@@ -22,32 +18,17 @@ function windowResizer() {
 }
 
 function addToShoppingList(event) {
-  //   console.log("Funktion körs");
   const ingredientsArray = [];
-  let ingredients;
   const recipe = event.currentTarget.closest("article");
 
-  ingredients = recipe.querySelectorAll("p");
-//   switch (1) {
-//     case 1:
-//       ingredients = document.querySelectorAll("#ingredients-recipe-1 p");
-//       break;
-//     case 2:
-//       ingredients = document.querySelectorAll("#ingredients-recipe-2 p");
-//       break;
-//     case 3:
-//       ingredients = document.querySelectorAll("#ingredients-recipe-3 p");
-//       break;
-//   }
+  const ingredients = recipe.querySelectorAll("ul p");
 
   //Fick hjälp med detta online men förstår koden.
   ingredients.forEach(function (item) {
     ingredientsArray.push(item.textContent);
   });
 
-  //   console.log(ingredientsArray);
-
-  while (ingredientsArray.length > 0) {
+  while (ingredientsArray.length > 2) {
     const newItem = document.createElement("li");
     newItem.textContent = `${ingredientsArray.shift()} × ${ingredientsArray.shift()}`;
     shoppingList.append(newItem);
@@ -55,17 +36,16 @@ function addToShoppingList(event) {
 }
 
 function emptyShoppingList() {
-  //console.log("Funktion emptyShoppingList körs");
-  let listItems = document.querySelectorAll("#shopping-list li");
-  //   console.log(listItems);
+  const listItems = document.querySelectorAll("#shopping-list li");
   listItems.forEach(function (item) {
     item.remove();
   });
 }
 
 menuBtn.addEventListener("click", openMenu);
-window.addEventListener("resize", windowResizer);
-addBtn1.addEventListener("click", addToShoppingList);
-addBtn2.addEventListener("click", addToShoppingList);
-addBtn3.addEventListener("click", addToShoppingList);
+addBtns.forEach(function (item) {
+  item.addEventListener("click", addToShoppingList);
+});
 emptyListBtn.addEventListener("click", emptyShoppingList);
+
+window.addEventListener("resize", windowResizer);
