@@ -4,13 +4,13 @@
 
 body {
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 5px;
+  margin: 5px;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-  margin: 20px;
 
   font-family:
     system-ui,
@@ -56,6 +56,8 @@ h3 {
   font-size: 0.9rem;
   cursor: pointer;
   font-weight: 500;
+  background-color: white;
+  max-height: 3rem;
 }
 
 .header {
@@ -72,6 +74,8 @@ h3 {
 
 #menu-btn {
   padding: 5px;
+  position: sticky;
+  top: 20px;
 }
 
 #menu {
@@ -105,7 +109,7 @@ main {
   gap: 1rem;
 }
 
-#search {
+/* #search {
   background-color: #425b2e;
   display: flex;
   justify-content: space-around;
@@ -120,7 +124,7 @@ main {
 #search-input {
   flex-basis: 80%;
   max-width: 100%;
-}
+} */
 
 #recipe-cards {
   background-color: #afc58e;
@@ -140,6 +144,7 @@ main {
   background-color: white;
   padding: 10px 20px;
   border-radius: 1rem;
+  gap: 5px;
 }
 
 .recipe div {
@@ -191,16 +196,14 @@ aside {
   gap: 1rem;
 }
 
-#download-btn {
-  display: none;
-}
-
 /* -------------Media quiries------------- */
 
 @media (min-width: 700px) {
   body {
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
   }
 
   .header {
@@ -246,8 +249,7 @@ aside {
 
   aside {
     flex-basis: 300px;
-    align-self: baseline;
-    justify-content: baseline;
+    align-self: flex-start;
     position: sticky;
     top: 20px;
   }
@@ -256,7 +258,25 @@ aside {
     flex: 1 1 250px;
   }
 
+  
   #recipe-cards {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  .recipe {
+    min-width: 250px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #recipe-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
   }
 }
