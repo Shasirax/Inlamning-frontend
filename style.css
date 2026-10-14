@@ -49,7 +49,6 @@ h3 {
   background-color: #ae4343;
   display: flex;
   justify-content: space-between;
-
   width: auto;
   border-radius: 20px;
   padding: 10px 15px;
@@ -189,6 +188,10 @@ aside {
 /* -------------Media quiries------------- */
 
 @media (min-width: 700px) {
+  body {
+    display: flex;
+    flex: 1 1 250px;
+  }
   #menu-btn {
     display: none;
   }
@@ -199,6 +202,7 @@ aside {
     justify-content: space-between;
     gap: 5px;
   }
+
 
   #menu a {
     border-style: solid;
@@ -217,6 +221,7 @@ aside {
   #search {
     max-width: 300px;
   }
+
   main {
     max-width: 80%;
   }

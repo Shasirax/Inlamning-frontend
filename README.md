@@ -20,3 +20,6 @@ Vilka beslut tog jag, och varför?
 ## Bedömning av AI-innehåll (VG)
 Hur avgjorde jag om det AI gav mig var bra nog?
 Vad behöll jag, vad ändrade jag, och varför?
+
+## Källor:
+Recept: mealime.com
