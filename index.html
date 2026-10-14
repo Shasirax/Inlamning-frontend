@@ -9,48 +9,55 @@
   <body>
     <header class="header">
       <h1>Felix receptbok</h1>
-      <nav class="main-menu-header">
-        <a href="#" class="active">Hem</a>
+
+      <button id="menu-btn">☰ Meny</button>
+
+      <nav id="menu">
+        <a href="#">Hem</a>
         <a href="#">Recept</a>
         <a href="#">Inköpslista (antal)</a>
       </nav>
     </header>
 
     <main>
-      <nav class="main-menu-mobile">
-        <a href="#" class="active">Hem</a>
-        <a href="#">Recept</a>
-        <a href="#">Inköpslista (antal)</a>
-      </nav>
-      <div class="search">
-        <input id="search-input" type="text" value="Sök recept..." />
-        <button id="button-search-all">Alla</button>
-        <button id="button-search-Middag">Middag</button>
-        <button id="button-search-Bakning">Bakning</button>
+      <div id="search">
+        <input id="search-input" type="text" placeholder="Sök recept..." />
+        <button id="button-search">Sök</button>
       </div>
 
-      <div class="recipe-cards">
-        <article>
-          <img src="" alt="Bild på första recept" />
-          <h3>Recept 1</h3>
-          <p>20 min * 4 portioner</p>
-          <button>+ Lägg till i inköplista</button>
+      <section class="recipe-cards">
+        <article class="recipe">
+          <h2>Creamy Sundried Tomato & Spinach Linguine Pasta</h2>
+          <h3>35 minuter * 4 portioner</h3>
+          <img src="img/creamy.png" alt="Bild på Creamy Sundried Tomato & Spinach Linguine Pasta" />
+          
+          <ul>
+            <li><p>Baby spinach</p><p>1 (142 g) pkg</p></li>
+            <li><p>Garlic</p><p>4 cloves</p></li>
+            <li><p>Linguine pasta</p><p>340 g</p></li>
+            <li><p>Parmesan cheese</p><p>28 g</p></li>
+            <li><p>Plain Greek yogurt</p><p>½ cup</p></li>
+            <li><p>Sun-dried tomatoes, oil-packed </p><p>12</p> </li>
+            <li><p>Tomato sauce</p><p>2 (213 ml) cans</p></li>
+          </ul>
+          <button class="btn" id="add-btn-1">+ Lägg till i inköplista</button>
+          <a class="btn" href="https://www.mealime.com/recipes/creamy-sundried-tomato-spinach-linguine-pasta/2011" target="_blank">Länk till recept</a>
         </article>
 
-        <article>
+        <article class="recipe">
           <img src="" alt="Bild på första recept" />
-          <h3>Recept 2</h3>
+          <h2>Recept 2</h2>
           <p>30 min * 2 portioner</p>
-          <button>+ Lägg till i inköplista</button>
+          <button class="btn" id="add-btn-2">+ Lägg till i inköplista</button>
         </article>
 
-        <article>
+        <article class="recipe">
           <img src="" alt="Bild på första recept" />
-          <h3>Recept 3</h3>
+          <h2>Recept 3</h2>
           <p>60 min * 4 portioner</p>
-          <button>+ Lägg till i inköplista</button>
+          <button class="btn" id="add-btn-3">+ Lägg till i inköplista</button>
         </article>
-      </div>
+      </section>
     </main>
 
     <aside>
