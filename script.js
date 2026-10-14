@@ -21,21 +21,24 @@ function windowResizer() {
   }
 }
 
-function addToShoppingList(recepie) {
+function addToShoppingList(event) {
   //   console.log("Funktion körs");
   const ingredientsArray = [];
   let ingredients;
-  switch (recepie) {
-    case 1:
-      ingredients = document.querySelectorAll("#ingredients-recipe-1 p");
-      break;
-    case 2:
-      ingredients = document.querySelectorAll("#ingredients-recipe-2 p");
-      break;
-    case 3:
-      ingredients = document.querySelectorAll("#ingredients-recipe-3 p");
-      break;
-  }
+  const recipe = event.currentTarget.closest("article");
+
+  ingredients = recipe.querySelectorAll("p");
+//   switch (1) {
+//     case 1:
+//       ingredients = document.querySelectorAll("#ingredients-recipe-1 p");
+//       break;
+//     case 2:
+//       ingredients = document.querySelectorAll("#ingredients-recipe-2 p");
+//       break;
+//     case 3:
+//       ingredients = document.querySelectorAll("#ingredients-recipe-3 p");
+//       break;
+//   }
 
   //Fick hjälp med detta online men förstår koden.
   ingredients.forEach(function (item) {
@@ -52,17 +55,17 @@ function addToShoppingList(recepie) {
 }
 
 function emptyShoppingList() {
-  console.log("Funktion emptyShoppingList körs");
+  //console.log("Funktion emptyShoppingList körs");
   let listItems = document.querySelectorAll("#shopping-list li");
-//   console.log(listItems);
+  //   console.log(listItems);
   listItems.forEach(function (item) {
-    shoppingList.remove(item);
+    item.remove();
   });
 }
 
 menuBtn.addEventListener("click", openMenu);
 window.addEventListener("resize", windowResizer);
-addBtn1.addEventListener("click", addToShoppingList(1));
-addBtn2.addEventListener("click", addToShoppingList(2));
-addBtn3.addEventListener("click", addToShoppingList(3));
+addBtn1.addEventListener("click", addToShoppingList);
+addBtn2.addEventListener("click", addToShoppingList);
+addBtn3.addEventListener("click", addToShoppingList);
 emptyListBtn.addEventListener("click", emptyShoppingList);
