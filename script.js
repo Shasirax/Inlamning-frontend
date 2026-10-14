@@ -5,11 +5,16 @@ const emptyListBtn = document.querySelector("#empty-list-btn");
 
 //Element
 const menu = document.querySelector("#menu");
+const header = document.querySelector(".header");
+const recipeCards = document.querySelector("#recipe-cards");
 const shoppingList = document.querySelector("#shopping-list");
 
-//Variabler
 const total = document.querySelector("#total");
-const remaining = document.querySelector("#remaining");
+const menuHome = document.querySelector("#menu-home");
+const menuRecipe = document.querySelector("#menu-recipe");
+const menuShoppingList = document.querySelector("#menu-shopping-list");
+
+//Variabler
 let shoppingListAmount = 0;
 
 //Funktioner
@@ -49,6 +54,22 @@ function emptyShoppingList() {
 
 function shoppingListAmountUpdater() {
   total.textContent = `Totalt: ${shoppingListAmount} ingredienser`;
+  menuShoppingList.textContent = `Inköpslista (${shoppingListAmount})`;
+}
+
+function scrollToHome() {
+  console.log("Scroll to Home");
+  header.scrollIntoView();
+}
+
+function scrollToRecipe() {
+  console.log("Scroll to Recipe");
+  recipeCards.scrollIntoView();
+}
+
+function scrollToShoppingList() {
+  console.log("Scroll to List");
+  shoppingList.scrollIntoView(screenTop);
 }
 
 //Event
@@ -57,3 +78,7 @@ addBtns.forEach(function (item) {
   item.addEventListener("click", addToShoppingList);
 });
 emptyListBtn.addEventListener("click", emptyShoppingList);
+
+menuHome.addEventListener("click", scrollToHome);
+menuRecipe.addEventListener("click", scrollToRecipe);
+menuShoppingList.addEventListener("click", scrollToShoppingList);
