@@ -3,9 +3,9 @@
 }
 
 body {
-  background-color: #425b2e;
+  background-color: whitesmoke;
   padding: 20px;
-  color: #111111;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,14 +24,25 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  font-size: small;
+}
+
+.light-mode-1 {
+  background-color: #afc58e;
+}
+
+.light-mode-2 {
+  background-color: #afc58e;
 }
 
 p {
   margin: 3px;
+  font-size: small;
 }
 
-h1,
+h1 {
+  margin: 5px;
+}
+
 h2,
 h3 {
   margin: 5px;
@@ -46,7 +57,7 @@ h3 {
 }
 
 .header {
-  background-color: #ae4343;
+  background-color: #afc58e;
   display: flex;
   justify-content: space-between;
   width: auto;
@@ -83,12 +94,12 @@ h3 {
 }
 
 main {
-  background-color: #76e998;
+  background-color: #afc58e;
   display: flex;
   flex-direction: column;
   width: auto;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 0px 0px;
   gap: 1rem;
 }
 
@@ -110,7 +121,7 @@ main {
 }
 
 #recipe-cards {
-  background-color: #ae4343;
+  background-color: #afc58e;
   border-radius: 1rem;
   padding: 10px 20px;
   display: flex;
@@ -124,7 +135,7 @@ main {
   border-style: solid;
   border-color: #111111;
   display: grid;
-  background-color: #425b2e;
+  background-color: white;
   padding: 10px 20px;
   border-radius: 1rem;
 }
@@ -166,12 +177,13 @@ li {
 }
 
 aside {
-  background-color: #76e998;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
   width: auto;
+  border: 2px solid;
+  border-color: #94999b;
   border-radius: 20px;
   padding: 10px 20px;
   gap: 1rem;
@@ -188,7 +200,7 @@ aside {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
+
   .header {
     flex-basis: 100%;
   }
@@ -231,12 +243,18 @@ aside {
   }
 
   aside {
-    flex-basis: 250px;
+    flex-basis: 300px;
+    align-self: baseline;
+    justify-content: baseline;
+    position: sticky;
+    top: 20px;
   }
 
   main {
     flex: 1 1 250px;
   }
 
-  
+  #recipe-cards {
+    flex-direction: row;
+  }
 }
