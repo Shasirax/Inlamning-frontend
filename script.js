@@ -5,15 +5,10 @@ const emptyListBtn = document.querySelector("#empty-list-btn");
 
 //Element
 const menu = document.querySelector("#menu");
-const header = document.querySelector(".header");
-const recipeCards = document.querySelector("#recipe-cards");
 const shoppingList = document.querySelector("#shopping-list");
 
 const total = document.querySelector("#total");
-const menuHome = document.querySelector("#menu-home");
-const menuRecipe = document.querySelector("#menu-recipe");
 const menuShoppingList = document.querySelector("#menu-shopping-list");
-
 //Variabler
 let shoppingListAmount = 0;
 
@@ -23,7 +18,6 @@ function openMenu() {
 }
 
 function addToShoppingList(event) {
-  event.preventDefault();
   const ingredientsArray = [];
   const recipe = event.currentTarget.closest("article");
 
@@ -57,20 +51,6 @@ function shoppingListAmountUpdater() {
   menuShoppingList.textContent = `Inköpslista (${shoppingListAmount})`;
 }
 
-function scrollToHome() {
-  console.log("Scroll to Home");
-  header.scrollIntoView();
-}
-
-function scrollToRecipe() {
-  console.log("Scroll to Recipe");
-  recipeCards.scrollIntoView();
-}
-
-function scrollToShoppingList() {
-  console.log("Scroll to List");
-  shoppingList.scrollIntoView(screenTop);
-}
 
 //Event
 menuBtn.addEventListener("click", openMenu);
@@ -78,7 +58,3 @@ addBtns.forEach(function (item) {
   item.addEventListener("click", addToShoppingList);
 });
 emptyListBtn.addEventListener("click", emptyShoppingList);
-
-menuHome.addEventListener("click", scrollToHome);
-menuRecipe.addEventListener("click", scrollToRecipe);
-menuShoppingList.addEventListener("click", scrollToShoppingList);
