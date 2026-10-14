@@ -9,6 +9,8 @@ const shoppingList = document.querySelector("#shopping-list");
 
 const total = document.querySelector("#total");
 const menuShoppingList = document.querySelector("#menu-shopping-list");
+const menuDarkMode = document.querySelector("#menu-dark-mode");
+
 //Variabler
 let shoppingListAmount = 0;
 
@@ -51,6 +53,13 @@ function shoppingListAmountUpdater() {
   menuShoppingList.textContent = `Inköpslista (${shoppingListAmount})`;
 }
 
+function darkMode() {
+  document.querySelector("body").classList.toggle("dark");
+  document.querySelector("header").classList.toggle("dark");
+  document.querySelector("main").classList.toggle("dark");
+  document.querySelector(".recipe-card").classList.toggle("dark");
+}
+
 
 //Event
 menuBtn.addEventListener("click", openMenu);
@@ -58,3 +67,4 @@ addBtns.forEach(function (item) {
   item.addEventListener("click", addToShoppingList);
 });
 emptyListBtn.addEventListener("click", emptyShoppingList);
+menuDarkMode.addEventListener("click", darkMode);

@@ -38,3 +38,12 @@ header {
   border-radius: 20px;
   padding: 10px 15px;
 }
+
+a {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 500;
+  margin: 0px;
+  text-decoration: none;
+  color: black;
+}
