@@ -1,20 +1,19 @@
+//Knappar
 const menuBtn = document.querySelector("#menu-btn");
-const menu = document.querySelector("#menu");
 const addBtns = document.querySelectorAll(".add-list-btn");
 const emptyListBtn = document.querySelector("#empty-list-btn");
 
+//Element
+const menu = document.querySelector("#menu");
 const shoppingList = document.querySelector("#shopping-list");
+
+//Variabler
 const total = document.querySelector("#total");
 const remaining = document.querySelector("#remaining");
 
+//Funktioner
 function openMenu() {
   menu.classList.toggle("open");
-}
-
-function windowResizer() {
-  if (window.screen.availWidth >= 700) {
-    menu.classList.remove("open");
-  }
 }
 
 function addToShoppingList(event) {
@@ -23,7 +22,7 @@ function addToShoppingList(event) {
 
   const ingredients = recipe.querySelectorAll("ul p");
 
-  //Fick hjälp med detta online men förstår koden.
+  //Fick hjälp med detta online(Stackoverflow) men förstår koden.
   ingredients.forEach(function (item) {
     ingredientsArray.push(item.textContent);
   });
@@ -42,10 +41,9 @@ function emptyShoppingList() {
   });
 }
 
+//Event
 menuBtn.addEventListener("click", openMenu);
 addBtns.forEach(function (item) {
   item.addEventListener("click", addToShoppingList);
 });
 emptyListBtn.addEventListener("click", emptyShoppingList);
-
-window.addEventListener("resize", windowResizer);

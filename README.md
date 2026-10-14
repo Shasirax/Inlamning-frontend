@@ -17,6 +17,7 @@ Minst två exempel. För varje:
 - Vad gjorde jag med det?
 ## Tekniska val (VG)
 Vilka beslut tog jag, och varför?
+* Bygde med flex istället för grid för att jag förstod detta bättre och ville öva mer på det. 
 ## Bedömning av AI-innehåll (VG)
 Hur avgjorde jag om det AI gav mig var bra nog?
 Vad behöll jag, vad ändrade jag, och varför?
