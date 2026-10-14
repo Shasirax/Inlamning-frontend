@@ -61,8 +61,6 @@ h3 {
 
 #menu-btn {
   padding: 5px;
-  position: sticky;
-  top: 20px;
 }
 
 #menu {
@@ -117,8 +115,8 @@ main {
   gap: 5px;
 }
 
-
-.recipe div, a {
+.recipe div,
+a {
   display: flex;
   justify-content: space-around;
   font-weight: 500;
@@ -126,8 +124,6 @@ main {
   text-decoration: none;
   color: black;
 }
-
-
 
 .recipe img {
   max-width: 85%;
@@ -222,10 +218,6 @@ footer {
     padding: 12px 15px;
   }
 
-  #search {
-    max-width: 300px;
-  }
-
   aside {
     flex-basis: 300px;
     align-self: flex-start;
@@ -237,12 +229,10 @@ footer {
     flex: 1 1 250px;
   }
 
-  
   #recipe-cards {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
   }
 
   .recipe {
@@ -256,7 +246,6 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    
   }
 }
 
@@ -266,7 +255,8 @@ body.dark {
   color: #e6ebdd;
 }
 
-body.dark header, main {
+body.dark header,
+body.dark main {
   background-color: #2b3822;
 }
 
@@ -287,4 +277,3 @@ body.dark .btn {
   background-color: #afc58e;
   color: #151a12;
 }
-
