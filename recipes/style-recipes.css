@@ -33,10 +33,14 @@ h3 {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #afc58e;
   width: auto;
   border-radius: 20px;
   padding: 10px 15px;
+
 }
 
 a {
@@ -46,4 +50,19 @@ a {
   margin: 0px;
   text-decoration: none;
   color: black;
+}
+
+body.dark {
+  background-color: #151a12;
+  border-color: #2b3822;
+  color: #e6ebdd;
+}
+
+body.dark header {
+  background-color: #2b3822;
+}
+
+body.dark .dark-mode-btn {
+  background-color: #151a12;
+  color: #e6ebdd;
 }

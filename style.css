@@ -260,24 +260,30 @@ footer {
   }
 }
 
-.dark {
-  color: #e6ebdd;
-  border-color: #5f6f4c;
-}
-
 body.dark {
   background-color: #151a12;
+  border-color: #5f6f4c;
+  color: #e6ebdd;
 }
 
-header.dark, main.dark {
+body.dark header, main {
   background-color: #2b3822;
 }
 
-#recipe-card.dark {
+body.dark .recipe {
   background-color: #222a1b;
+  color: #e6ebdd;
 }
 
-.btn.dark {
+body.dark h2 {
+  color: #e6ebdd;
+}
+
+body.dark .recipe div {
+  color: #a9b39c;
+}
+
+body.dark .btn {
   background-color: #afc58e;
   color: #151a12;
 }

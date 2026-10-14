@@ -55,11 +55,7 @@ function shoppingListAmountUpdater() {
 
 function darkMode() {
   document.querySelector("body").classList.toggle("dark");
-  document.querySelector("header").classList.toggle("dark");
-  document.querySelector("main").classList.toggle("dark");
-  document.querySelector(".recipe-card").classList.toggle("dark");
 }
-
 
 //Event
 menuBtn.addEventListener("click", openMenu);
