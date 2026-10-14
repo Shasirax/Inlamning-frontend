@@ -28,14 +28,17 @@
       <section id="recipe-cards">
         <article id="recipe 1" class="recipe">
           <h2>Creamy Sundried Tomato & Spinach Linguine Pasta</h2>
-          <p>35 minuter</p>
-          <p>4 portioner</p>
+          <div>
+            <p>35 minuter</p>
+            <p>4 portioner</p>
+          </div>
+
           <img
             src="img/creamy_pasta.png"
             alt="Bild på Creamy Sundried Tomato & Spinach Linguine Pasta"
           />
 
-          <ul>
+          <ul id="ingredients-recipe-1">
             <li>
               <p>Baby spinach</p>
               <p>1 (142 g) pkg</p>
@@ -75,21 +78,24 @@
           </ul>
           <button class="btn" id="add-btn-1">+ Lägg till i inköplista</button>
           <a
-            class="btn"
+            class="source"
             href="https://www.mealime.com/recipes/creamy-sundried-tomato-spinach-linguine-pasta/2011"
             target="_blank"
             >Källa till recept</a
           >
         </article>
         <article id="recipe 2" class="recipe">
-          <p>35 minuter</p>
-          <p>4 portioner</p>
+          <h2>Sausage-Basil Ragù over Potato Gnocchi with Parmesan.</h2>
+          <div>
+            <p>35 minuter</p>
+            <p>4 portioner</p>
+          </div>
           <img
             src="img/ragu.png"
             alt="Bild på Sausage-Basil Ragù over Potato Gnocchi with Parmesan."
           />
 
-          <ul>
+          <ul id="ingredients-recipe-2">
             <li>
               <p>Fresh basil</p>
               <p>1 small pkg</p>
@@ -125,7 +131,7 @@
           </ul>
           <button class="btn" id="add-btn-1">+ Lägg till i inköplista</button>
           <a
-            class="btn"
+            class="source"
             href="https://www.mealime.com/recipes/sausage-basil-ragu-over-potato-gnocchi-parmesan/11801"
             target="_blank"
             >Källa till recept</a
@@ -133,14 +139,16 @@
         </article>
         <article id="recipe 3" class="recipe">
           <h2>Simple Butter Chicken with Peas & Basmati Rice.</h2>
-          <p>35 minuter</p>
-          <p>4 portioner</p>
+          <div>
+            <p>35 minuter</p>
+            <p>4 portioner</p>
+          </div>
           <img
             src="img/butter_chicken.png"
             alt="Bild på Simple Butter Chicken with Peas & Basmati Rice"
           />
 
-          <ul>
+          <ul id="ingredients-recipe-3">
             <li>
               <p>Basmati rice</p>
               <p>1 ⅓ cups</p>
@@ -184,38 +192,21 @@
           </ul>
           <button class="btn" id="add-btn-1">+ Lägg till i inköplista</button>
           <a
-            class="btn"
-            href="https://www.mealime.com/recipes/creamy-sundried-tomato-spinach-linguine-pasta/2011"
+            class="source"
+            href="https://www.mealime.com/recipes/simple-butter-chicken-peas-basmati-rice/8757"
             target="_blank"
             >Länk till recept</a
           >
         </article>
-
-        <article class="recipe">
-          <img src="" alt="Bild på första recept" />
-          <h2>Recept 2</h2>
-          <p>30 min * 2 portioner</p>
-          <button class="btn" id="add-btn-2">+ Lägg till i inköplista</button>
-        </article>
-
-        <article class="recipe">
-          <img src="" alt="Bild på första recept" />
-          <h2>Recept 3</h2>
-          <p>60 min * 4 portioner</p>
-          <button class="btn" id="add-btn-3">+ Lägg till i inköplista</button>
-        </article>
       </section>
     </main>
-
     <aside>
       <h2>Inköpslista</h2>
       <ul>
         <li>Mjölk</li>
-        <li>Ägg</li>
-        <li>Mjöl</li>
       </ul>
-      <button>Ladda ner .txt</button>
-      <button>Töm listan</button>
+      <button class="btn" id="download-btn">Ladda ner .txt</button>
+      <button class="btn" id="empty-list-btn">Töm listan</button>
     </aside>
 
     <footer>

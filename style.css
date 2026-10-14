@@ -27,6 +27,24 @@ body {
   font-size: small;
 }
 
+p {
+  margin: 3px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 5px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
 .header {
   background-color: #ae4343;
   display: flex;
@@ -107,34 +125,60 @@ main {
   border-radius: 1rem;
 }
 
-.recipe p {
+.recipe div {
+  display: flex;
+  justify-content: space-around;
   font-weight: 500;
-  margin: 5px;
+  margin: 0px;
 }
 
 .recipe img {
-  max-width: 75%;
+  max-width: 85%;
   justify-self: center;
   border-radius: 20px;
 }
 
-.recipe ul {
+ul {
   padding-left: 10px;
 }
-.recipe li {
+
+li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.btn {
+.source {
   padding: 12px 25px;
-  border: none;
+  background-color: white;
+  border: 1px;
+  border-style: solid;
   border-radius: 30px;
   font-size: 0.9rem;
   cursor: pointer;
   font-weight: 500;
+  text-decoration: none;
+  color: black;
+  justify-self: center;
 }
+
+aside {
+  background-color: #76e998;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: auto;
+  border-radius: 20px;
+  padding: 10px 20px;
+  gap: 1rem;
+}
+
+#download-btn {
+  display: none;
+}
+
+/* -------------Media quiries------------- */
 
 @media (min-width: 700px) {
   .header {
