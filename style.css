@@ -67,6 +67,10 @@ h3 {
   display: none;
 }
 
+#menu-dark-mode {
+  cursor: pointer;
+}
+
 #menu.open {
   display: flex;
   flex-direction: column;
