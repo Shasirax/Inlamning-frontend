@@ -264,7 +264,7 @@ body.dark main {
   background-color: #2b3822;
 }
 
-body.dark .recipe {
+body.dark .recipe, body.dark #menu a {
   background-color: #222a1b;
   color: #e6ebdd;
 }
@@ -281,3 +281,5 @@ body.dark .btn {
   background-color: #afc58e;
   color: #151a12;
 }
+
+/* #222a1b */
